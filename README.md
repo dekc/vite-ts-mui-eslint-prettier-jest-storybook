@@ -16,7 +16,7 @@ A Vite template for React, TypeScript and the latest major version of MUI.
 
 ## Getting Started
 
-- Clone the repo, `git clone https://github.com/christopher-caldwell/vite-material-ui.git`, or use the "Use this template" button at the top of this page.
+- Clone the repo, `git clone https://github.com/dekc/vite-ts-mui-eslint-prettier-jest-storybook`, or use the "Use this template" button at the top of this page.
 - Install dependencies using `yarn`
 - Start the server with `yarn dev`
 
