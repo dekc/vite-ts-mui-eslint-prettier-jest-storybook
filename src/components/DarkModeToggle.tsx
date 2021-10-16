@@ -43,10 +43,10 @@ interface BallProps {
 const Ball = styled('div', {
   shouldForwardProp: isPropValid,
 })<BallProps>`
-  background-color: #fff;
+  background-color: #777575;
   border-radius: 50%;
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 2px;
   height: 16px;
   width: 16px;
@@ -64,9 +64,9 @@ const Label = styled('label')`
   justify-content: space-between;
   padding: 5px;
   position: relative;
-  height: 20px;
-  width: 35px;
-  transform: scale(1.5);
+  height: 22px;
+  width: 38px;
+  transform: scale(1.2);
 `;
 
 const Root = styled('div')`

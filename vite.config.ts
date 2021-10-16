@@ -1,6 +1,7 @@
 import reactRefresh from '@vitejs/plugin-react-refresh';
-import Checker from 'vite-plugin-checker';
 import { resolve } from 'path';
+import Checker from 'vite-plugin-checker';
+import reactJsx from 'vite-react-jsx';
 
 function pathResolve(dir: string) {
   return resolve(__dirname, '.', dir);
@@ -18,6 +19,7 @@ const config = () => ({
   },
   plugins: [
     reactRefresh(),
+    reactJsx(),
     Checker({
       typescript: true,
       overlay: true,
