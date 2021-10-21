@@ -1,6 +1,6 @@
-# React + TypeScript + MUI
+# React + TypeScript + MUI + Storybook + Jest 
 
-A Vite template for React, TypeScript and the latest major version of MUI.
+A Vite template for React, TypeScript and the latest major version of MUI along with Storybook and Jest
 
 ## Highlights
 
@@ -9,10 +9,12 @@ A Vite template for React, TypeScript and the latest major version of MUI.
 - v5 ( latest ) version of Material UI, `@mui/material`
 - Dark mode toggle
 - Aliased imports
+- Storybook configured
+- Jest
 
 ## Demo
 
-<img src='./screen-shots/demo.png' />
+
 
 ## Getting Started
 
@@ -24,8 +26,9 @@ A Vite template for React, TypeScript and the latest major version of MUI.
 
 To learn more about the newest ways to use MUI, checkout [the docs](https://mui.com/getting-started/usage/).
 
-### What's Included
+### Whats in the starter
 
-- Custom theming
-- Using that theme from within a `styled` component.
-- Dark mode toggle with React Context
+### ToDo
+Different branches will contain different variations/combinations
+- MobX state management
+- UI-Router-React
