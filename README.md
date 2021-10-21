@@ -5,7 +5,7 @@ A Vite template for React, TypeScript and the latest major version of MUI along 
 ## Highlights
 
 - React w/ TypeScript
-- Takes 8-10 seconds to build prod bundle at 198kb
+- Fast to build prod bundle
 - v5 ( latest ) version of Material UI, `@mui/material`
 - Dark mode toggle
 - Aliased imports
