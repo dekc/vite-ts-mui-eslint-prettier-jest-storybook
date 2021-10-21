@@ -32,3 +32,4 @@ To learn more about the newest ways to use MUI, checkout [the docs](https://mui.
 Different branches will contain different variations/combinations
 - MobX state management
 - UI-Router-React
+- React-Intl
