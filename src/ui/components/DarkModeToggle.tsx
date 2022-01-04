@@ -4,7 +4,7 @@ import LightModeIcon from '@mui/icons-material/WbSunny';
 import { styled } from '@mui/material';
 import React, { FC, useContext } from 'react';
 
-import { ChosenTheme } from '@/providers';
+import { ChosenTheme } from '@/ui/providers';
 
 const DarkModeToggle: FC = () => {
   const { theme, setTheme } = useContext(ChosenTheme);

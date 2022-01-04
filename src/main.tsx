@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { ChosenThemeProvider, ThemeProvider } from '@/providers';
+import { ChosenThemeProvider, ThemeProvider } from '@/ui/providers';
 
 import App from './App';
 

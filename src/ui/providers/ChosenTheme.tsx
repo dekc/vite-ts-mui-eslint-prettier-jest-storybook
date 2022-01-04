@@ -2,7 +2,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { createContext, Dispatch, FC, SetStateAction } from 'react';
 import React from 'react';
 
-import useLocalStorage from '@/hooks/useLocalStorage';
+import useLocalStorage from '@/services/localStorage';
 
 export const ChosenTheme = createContext<IChosenTheme>({} as IChosenTheme);
 
