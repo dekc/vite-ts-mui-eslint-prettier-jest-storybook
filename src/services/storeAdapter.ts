@@ -1,12 +1,17 @@
 import { UserStoreService } from '@/app/ports';
-import { useRootStore } from '@/store';
+import { useRootStore } from '@/mobxStore';
+// import { useStore } from '@/contextStore/store';
 
 const useUserStore = (): UserStoreService => {
   const { userStore } = useRootStore();
 
-  const { name, id, email, updateUser } = userStore;
-
-  return { user: { name, id, email }, updateUser };
+  return userStore;
 };
+
+// const useUserStore = (): UserStoreService => {
+//   const userStore = useStore();
+
+//   return userStore;
+// };
 
 export { useUserStore };

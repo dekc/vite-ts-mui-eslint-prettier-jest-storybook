@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 import React from 'react';
 
-import { ChosenThemeProvider, ThemeProvider } from '@/ui/providers';
+import { ChosenThemeProvider, ThemeProvider } from '@/ui/theme';
 
 import App from './App';
 

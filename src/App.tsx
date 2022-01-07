@@ -1,25 +1,14 @@
-import { Link, Slider, styled } from '@mui/material';
+import { styled } from '@mui/material';
+import { UIView } from '@uirouter/react';
 import React from 'react';
 
 import Header from '@/ui/header';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Root>
       <Header />
-      <div>
-        <h2 id="title">
-          OK so, lets try a{' '}
-          <Link
-            href="https://mui.com/components/slider/#heading-continuous-sliders"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Slider...
-          </Link>
-        </h2>
-        <Slider />
-      </div>
+      <UIView />
     </Root>
   );
 };
