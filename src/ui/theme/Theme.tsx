@@ -1,3 +1,4 @@
+import type {} from '@mui/lab/themeAugmentation';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 import React, { FC, useContext, useMemo } from 'react';
@@ -16,7 +17,7 @@ export const ThemeProvider: FC = ({ children }) => {
   );
 };
 
-const brandColor = '#00b8d4';
+const brandColor = '#73b3bd';
 const createThemeHelper = (theme: 'dark' | 'light') => {
   const isDark = theme === 'dark';
   return createTheme({
@@ -27,13 +28,41 @@ const createThemeHelper = (theme: 'dark' | 'light') => {
         paper: isDark ? '#242526' : '#fffff',
       },
       primary: {
-        main: brandColor,
+        main: '#547575',
       },
       error: {
         main: 'rgb(232, 51, 51)',
       },
       success: {
         main: 'rgb(76,175,80)',
+      },
+      info: {
+        main: 'rgb(212, 230, 233)',
+      },
+    },
+    components: {
+      MuiAppBar: {
+        styleOverrides: {
+          colorPrimary: {
+            backgroundColor: isDark ? '#303030;' : brandColor,
+          },
+        },
+      },
+      MuiTabs: {
+        styleOverrides: {
+          indicator: {
+            backgroundColor: isDark ? brandColor : '#f0f0f0',
+          },
+        },
+      },
+      MuiTab: {
+        styleOverrides: {
+          root: {
+            '&.Mui-selected': {
+              color: isDark ? brandColor : '#f0f0f0',
+            },
+          },
+        },
       },
     },
   });

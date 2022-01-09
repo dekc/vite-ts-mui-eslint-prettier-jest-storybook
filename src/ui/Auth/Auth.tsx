@@ -27,7 +27,7 @@ const Auth = () => {
     event.preventDefault();
     await authenticate(formValues.name, formValues.password);
     setLoading(false);
-    router.stateService.go('home');
+    router.stateService.go('ports');
   };
 
   return (

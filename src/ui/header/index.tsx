@@ -1,11 +1,38 @@
 import { AccountCircle } from '@mui/icons-material';
-import { AppBar, Button, IconButton, Menu, MenuItem, Paper, Toolbar, Typography } from '@mui/material';
-import { useRouter } from '@uirouter/react';
+import { AppBar, Button, IconButton, Menu, MenuItem, Paper, Tab, Tabs, Toolbar, Typography } from '@mui/material';
+import { useRouter, useTransitionHook } from '@uirouter/react';
 import { observer } from 'mobx-react-lite';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useUserStore } from '@/services/storeAdapter';
 import DarkModeToggle from '@/ui/components/DarkModeToggle';
+
+const AppTabs = () => {
+  const [value, setValue] = useState<string>('home');
+  const router = useRouter();
+  useTransitionHook('onEnter', {}, (transition) => {
+    const to = transition.to();
+    setValue(to.name || 'home');
+  });
+
+  // useEffect(() => {
+  //   setValue(state.name || 'home');
+  // }, [state]);
+
+  const handleTabChange = (event: React.SyntheticEvent, newValue: string) => {
+    console.log('Selected tab: ', newValue);
+    router.stateService.go(newValue);
+    setValue(newValue);
+  };
+
+  return (
+    <Tabs value={value} onChange={handleTabChange} sx={{ flexGrow: 1 }}>
+      <Tab label="Home" value="home" />
+      <Tab label="Ports" value="ports" />
+      <Tab label="About" value="about" />
+    </Tabs>
+  );
+};
 
 const Header = (): JSX.Element => {
   const { user } = useUserStore();
@@ -25,13 +52,20 @@ const Header = (): JSX.Element => {
     setAnchorEl(null);
   };
 
+  // <UISrefActive class={'active'}>
+  //   <UISref to={'ports'}>
+  //     <a role="button">Port Map</a>
+  //   </UISref>
+  // </UISrefActive>;
+
   return (
     <AppBar position="fixed">
       <Toolbar variant="dense">
         <DarkModeToggle />
-        <Typography variant="h6" component="div" pl="1em" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" pl="1em" pr="2em">
           Clean Architecture
         </Typography>
+        <AppTabs />
         {user ? (
           <>
             <IconButton
