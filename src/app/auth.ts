@@ -18,6 +18,8 @@ const useAuthenticate = () => {
   return {
     user: store.user,
     authenticate,
+    isAuthenticated: auth.isAuthenticated(),
+    logout: auth.logout(),
   };
 };
 

@@ -25,6 +25,10 @@ class UserStore {
     return this.user?.email;
   }
 
+  isAuthenticated(): boolean {
+    return !!this.user;
+  }
+
   updateUser(user: User): void {
     this.user = {
       ...this.user,

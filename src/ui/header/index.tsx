@@ -11,8 +11,9 @@ const AppTabs = () => {
   const [value, setValue] = useState<string>('home');
   const router = useRouter();
   useTransitionHook('onEnter', {}, (transition) => {
+    console.log('transition', transition);
     const to = transition.to();
-    setValue(to.name || 'home');
+    if (to.name !== 'login') setValue(to.name || 'home');
   });
 
   // useEffect(() => {
