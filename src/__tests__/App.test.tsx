@@ -2,18 +2,14 @@
  * @jest-environment jsdom
  */
 import { render, screen } from '@testing-library/react';
+import React from 'react';
 
-import App from '../App';
+import { About } from '@/ui/About';
 
 describe('App', () => {
-  it('renders App component', () => {
+  it('renders About component', () => {
     // arrange
-    render(<App />);
-    expect(screen.queryByText('Slider...')).toBeInTheDocument();
-  });
-  it('should show roles', () => {
-    render(<App />);
-    const action = screen.getByRole('banner');
-    expect(action).toBeInTheDocument();
+    render(<About />);
+    expect(screen.queryByText('About')).toBeInTheDocument();
   });
 });
